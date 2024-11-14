@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="en-US">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="1.2.5.1",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this.t.bind(this),this.touchStartHandler=this.i.bind(this),this.touchMoveHandler=this.o.bind(this),this.touchEndHandler=this.h.bind(this),this.clickHandler=this.u.bind(this),this.interceptedClicks=[],this.interceptedClickListeners=[],this.l(this),window.addEventListener("pageshow",(t=>{this.persisted=t.persisted,this.everythingLoaded&&this.m()})),document.addEventListener("DOMContentLoaded",(()=>{this.p()})),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}k(t){document.hidden?t.t():(this.triggerEvents.forEach((e=>window.addEventListener(e,t.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler))}_(){this.triggerEvents.forEach((t=>window.removeEventListener(t,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}i(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this.L(t.target,!0),this.M(t.target,"onclick","rocket-onclick"),this.C())}o(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.M(t.target,"rocket-onclick","onclick"),this.O()}h(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}u(t){t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.M(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this.O()}D(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))}))}l(t){EventTarget.prototype.addEventListenerBase=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(e,i,o){"click"!==e||t.windowLoaded||i===t.clickHandler||t.interceptedClickListeners.push({target:this,func:i,options:o}),(this||window).addEventListenerBase(e,i,o)}}L(t,e){this.interceptedClickListeners.forEach((i=>{i.target===t&&(e?t.removeEventListener("click",i.func,i.options):t.addEventListener("click",i.func,i.options))})),t.parentNode!==document.documentElement&&this.L(t.parentNode,e)}S(){return new Promise((t=>{this.T?this.O=t:t()}))}C(){this.T=!0}O(){this.T=!1}M(t,e,i){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(i,event.target.getAttribute(e)),event.target.removeAttribute(e))}t(){this._(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this.R.bind(this)):this.R()}p(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach((e=>{let i=e.getAttribute("data-rocket-src");if(i&&0!==i.indexOf("data:")){0===i.indexOf("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}})),t=[...new Map(t.map((t=>[JSON.stringify(t),t]))).values()],this.j(t,"preconnect")}async R(){this.lastBreath=Date.now(),this.P(this),this.F(this),this.q(),this.A(),this.I(),await this.U(this.delayedScripts.normal),await this.U(this.delayedScripts.defer),await this.U(this.delayedScripts.async);try{await this.W(),await this.H(this),await this.J()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.S().then((()=>{this.D()})),this.N()}A(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)}))}async B(t){if(await this.G(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise((e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)i=document.createElement("script"),[...t.attributes].forEach((t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))})),t.text&&(i.text=t.text),i.hasAttribute("src")?(i.addEventListener("load",o),i.addEventListener("error",(function(){i.setAttribute("data-rocket-status","failed"),e()})),setTimeout((()=>{i.isConnected||e()}),1)):(i.text=t.text,o()),t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o),t.addEventListener("error",(function(){t.setAttribute("data-rocket-status","failed"),e()})),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed"),e()}}));t.setAttribute("data-rocket-status","skipped")}async U(t){const e=t.shift();return e&&e.isConnected?(await this.B(e),this.U(t)):Promise.resolve()}I(){this.j([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}j(t,e){var i=document.createDocumentFragment();t.forEach((t=>{const o=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(o){const n=document.createElement("link");n.href=o,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),i.appendChild(n),this.trash.push(n)}})),document.head.appendChild(i)}P(t){let e={};function i(i,o){return e[o].eventsToRewrite.indexOf(i)>=0&&!t.everythingLoaded?"rocket-"+i:i}function o(t,o){!function(t){e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(o)}function n(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o||function(){},set(n){t.everythingLoaded?o=n:e["rocket"+i]=o=n}})}o(document,"DOMContentLoaded"),o(window,"DOMContentLoaded"),o(window,"load"),o(window,"pageshow"),o(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}F(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map((t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t)).join(" ")}function o(o){if(o&&o.fn&&!t.allJQueries.includes(o)){o.fn.ready=o.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(o):document.addEventListener("rocket-DOMContentLoaded",(()=>e.bind(document)(o))),o([])};const e=o.fn.on;o.fn.on=o.fn.init.prototype.on=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e}))),e.apply(this,arguments),this},t.allJQueries.push(o)}e=o}o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}async H(t){const e=document.querySelector("script[data-webpack]");e&&(await async function(){return new Promise((t=>{e.addEventListener("load",t),e.addEventListener("error",t)}))}(),await t.K(),await t.H(t))}async W(){this.domReadyFired=!0,await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.G(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}async J(){await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),window.dispatchEvent(new Event("rocket-load")),await this.G(),window.rocketonload&&window.rocketonload(),await this.G(),this.allJQueries.forEach((t=>t(window).trigger("rocket-jquery-load"))),await this.G();const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.G(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted}),this.windowLoaded=!0}m(){document.onreadystatechange&&document.onreadystatechange(),window.onload&&window.onload(),window.onpageshow&&window.onpageshow({persisted:this.persisted})}q(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript;i||console.error("WPRocket unable to document.write this: "+e);const o=document.createRange(),n=i.parentElement;let s=t.get(i);void 0===s&&(s=i.nextSibling,t.set(i,s));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),n.insertBefore(c,s)}}async G(){Date.now()-this.lastBreath>45&&(await this.K(),this.lastBreath=Date.now())}async K(){return document.hidden?new Promise((t=>setTimeout(t))):new Promise((t=>requestAnimationFrame(t)))}N(){this.trash.forEach((t=>t.remove()))}static run(){const t=new RocketLazyLoadScripts;t.k(t)}}RocketLazyLoadScripts.run()})();</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v23.8 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>About the School - Edify School Kanakapura</title>
+	<link rel="canonical" href="https://edifyschoolbengaluru.com/who-we-are/about-the-school/" />  
+	<meta property="og:locale" content="en_US" /> 
+	<meta property="og:type" content="article" /> 
+	<meta property="og:title" content="About the School - Edify School Kanakapura" />
+	<meta property="og:description" content="About the school Edify School, Bengaluru is known for its academic excellence, sports facilities and co-curricular activities. It is one of the best school in Bangalore. Our Edify School in Somanahalli, is powered by a spacious Library, wonder rooms, music rooms, English lab, Math lab and Science labs. The use of technology for teaching and learning [&hellip;]" />
+	<meta property="og:url" content="https://edifyschoolbengaluru.com/who-we-are/about-the-school/" />
+	<meta property="og:site_name" content="Edify School Kanakapura" />
+	<meta property="article:modified_time" content="2023-09-21T07:16:37+00:00" />
+	<meta property="og:image" content="https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/DSC_0614-1536x1021-1-768x511.jpg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="2 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://edifyschoolbengaluru.com/who-we-are/about-the-school/","url":"https://edifyschoolbengaluru.com/who-we-are/about-the-school/","name":"About the School - Edify School Kanakapura","isPartOf":{"@id":"https://edifyschoolbengaluru.com/#website"},"primaryImageOfPage":{"@id":"https://edifyschoolbengaluru.com/who-we-are/about-the-school/#primaryimage"},"image":{"@id":"https://edifyschoolbengaluru.com/who-we-are/about-the-school/#primaryimage"},"thumbnailUrl":"https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/DSC_0614-1536x1021-1-768x511.jpg","datePublished":"2023-04-19T06:39:30+00:00","dateModified":"2023-09-21T07:16:37+00:00","breadcrumb":{"@id":"https://edifyschoolbengaluru.com/who-we-are/about-the-school/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://edifyschoolbengaluru.com/who-we-are/about-the-school/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://edifyschoolbengaluru.com/who-we-are/about-the-school/#primaryimage","url":"https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/DSC_0614-1536x1021-1.jpg","contentUrl":"https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/DSC_0614-1536x1021-1.jpg","width":1536,"height":1021},{"@type":"BreadcrumbList","@id":"https://edifyschoolbengaluru.com/who-we-are/about-the-school/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://edifyschoolbengaluru.com/"},{"@type":"ListItem","position":2,"name":"Who we are","item":"https://edifyschoolbengaluru.com/who-we-are/"},{"@type":"ListItem","position":3,"name":"About the School"}]},{"@type":"WebSite","@id":"https://edifyschoolbengaluru.com/#website","url":"https://edifyschoolbengaluru.com/","name":"Edify School Kanakapura","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://edifyschoolbengaluru.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Edify School Kanakapura &raquo; Feed" href="https://edifyschoolbengaluru.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Edify School Kanakapura &raquo; Comments Feed" href="https://edifyschoolbengaluru.com/comments/feed/" />
+<script type="rocketlazyloadscript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/edifyschoolbengaluru.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='hello-elementor-css' href='https://edifyschoolbengaluru.com/wp-content/themes/hello-elementor/style.min.css?ver=3.0.1' media='all' />
+<link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://edifyschoolbengaluru.com/wp-content/themes/hello-elementor/theme.min.css?ver=3.0.1' media='all' />
+<link rel='stylesheet' id='hello-elementor-header-footer-css' href='https://edifyschoolbengaluru.com/wp-content/themes/hello-elementor/header-footer.min.css?ver=3.0.1' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.25.4' media='all' />
+<link rel='stylesheet' id='elementor-post-8-css' href='https://edifyschoolbengaluru.com/wp-content/uploads/elementor/css/post-8.css?ver=1730883190' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-css' href='https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=1731388389' media='all' />
+<link data-minify="1" rel='stylesheet' id='swiper-css' href='https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=1731388389' media='all' />
+<link rel='stylesheet' id='e-swiper-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.25.4' media='all' />
+<link rel='stylesheet' id='elementor-pro-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=3.21.2' media='all' />
+<link data-minify="1" rel='stylesheet' id='cotton-css' href='https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit/modules/mouse-cursor/assets/css/style.css?ver=1731388389' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.25.4' media='all' />
+<link rel='stylesheet' id='widget-image-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.25.4' media='all' />
+<link rel='stylesheet' id='widget-text-editor-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/css/widget-text-editor.min.css?ver=3.25.4' media='all' />
+<link rel='stylesheet' id='elementor-post-58-css' href='https://edifyschoolbengaluru.com/wp-content/cache/background-css/edifyschoolbengaluru.com/wp-content/uploads/elementor/css/post-58.css?ver=1730883617&wpr_t=1731408329' media='all' />
+<link rel='stylesheet' id='elementor-post-13-css' href='https://edifyschoolbengaluru.com/wp-content/uploads/elementor/css/post-13.css?ver=1730883190' media='all' />
+<link rel='stylesheet' id='elementor-post-240-css' href='https://edifyschoolbengaluru.com/wp-content/cache/background-css/edifyschoolbengaluru.com/wp-content/uploads/elementor/css/post-240.css?ver=1730883190&wpr_t=1731408329' media='all' />
+<link rel='stylesheet' id='elementor-post-5333-css' href='https://edifyschoolbengaluru.com/wp-content/uploads/elementor/css/post-5333.css?ver=1730883190' media='all' />
+<link rel='stylesheet' id='elementor-post-461-css' href='https://edifyschoolbengaluru.com/wp-content/uploads/elementor/css/post-461.css?ver=1730883190' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-ekiticons-css' href='https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css?ver=1731388389' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementskit-parallax-style-css' href='https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit/modules/parallax/assets/css/style.css?ver=1731388389' media='all' />
+<link data-minify="1" rel='stylesheet' id='ekit-widget-styles-css' href='https://edifyschoolbengaluru.com/wp-content/cache/background-css/edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit-lite/widgets/init/assets/css/widget-styles.css?ver=1731388389&wpr_t=1731408329' media='all' />
+<link data-minify="1" rel='stylesheet' id='ekit-widget-styles-pro-css' href='https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit/widgets/init/assets/css/widget-styles-pro.css?ver=1731388389' media='all' />
+<link data-minify="1" rel='stylesheet' id='ekit-responsive-css' href='https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit-lite/widgets/init/assets/css/responsive.css?ver=1731388389' media='all' />
+<style id='rocket-lazyload-inline-css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:var(--wpr-bg-dd6018e6-fd15-4560-bd0b-a9c4def34369) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CAlexandria%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CFresca%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7COpen+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.6.2' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=1731388389' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=1731388389' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementor-icons-fa-regular-css' href='https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=1731388389' media='all' />
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/plugins/elementor-pro/assets/js/page-transitions.min.js?ver=3.21.2" id="page-transitions-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit/modules/parallax/assets/js/jarallax.js?ver=1731388389" id="jarallax-js" defer></script>
+<link rel="https://api.w.org/" href="https://edifyschoolbengaluru.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://edifyschoolbengaluru.com/wp-json/wp/v2/pages/58" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://edifyschoolbengaluru.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.6.2" />
+<link rel='shortlink' href='https://edifyschoolbengaluru.com/?p=58' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://edifyschoolbengaluru.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fedifyschoolbengaluru.com%2Fwho-we-are%2Fabout-the-school%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://edifyschoolbengaluru.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fedifyschoolbengaluru.com%2Fwho-we-are%2Fabout-the-school%2F&#038;format=xml" />
+<meta name="generator" content="Elementor 3.25.4; features: additional_custom_breakpoints, e_optimized_control_loading; settings: css_print_method-external, google_font-enabled, font_display-swap">
+
+			<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+				var elementskit_module_parallax_url = "https://edifyschoolbengaluru.com/wp-content/plugins/elementskit/modules/parallax/"
+			</script>
+					<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<!-- Google tag (gtag.js) --> 
+<script type="rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id=AW-11397669948"></script> 
+<script type="rocketlazyloadscript"> 
+	window.dataLayer = window.dataLayer || []; 
+	function gtag(){dataLayer.push(arguments);} 
+	gtag('js', new Date()); 
+	gtag('config', 'AW-11397669948'); 
+</script>
+<!-- End Google tag (gtag.js) --><link rel="icon" href="https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/download.jpg" sizes="32x32" />
+<link rel="icon" href="https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/download.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/download.jpg" />
+<meta name="msapplication-TileImage" content="https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/download.jpg" />
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><style id="wpr-lazyload-bg-container"></style><style id="wpr-lazyload-bg-exclusion"></style>
+<noscript>
+<style id="wpr-lazyload-bg-nostyle">.elementor-58 .elementor-element.elementor-element-deed5fc:not(.elementor-motion-effects-element-type-background), .elementor-58 .elementor-element.elementor-element-deed5fc > .elementor-motion-effects-container > .elementor-motion-effects-layer{--wpr-bg-117c2c1d-21b1-42ce-be56-e5a5f48082c2: url('https://edifyschoolbengaluru.com/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-20-at-4.24.46-PM.jpeg');}.elementor-240 .elementor-element.elementor-element-f5e7772:not(.elementor-motion-effects-element-type-background), .elementor-240 .elementor-element.elementor-element-f5e7772 > .elementor-motion-effects-container > .elementor-motion-effects-layer{--wpr-bg-944ef0d7-46be-4254-8b06-03c9e2631b28: url('https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/VIEW-03-1-scaled.jpg');}table.dataTable thead .sorting{--wpr-bg-ed098207-b13b-47b2-8bcc-a744c9cb7d84: url('https://edifyschoolbengaluru.com/wp-content/plugins/elementskit-lite/widgets/init/assets/img/arrow.png');}table.dataTable thead .sorting_asc{--wpr-bg-6ac8becc-b71e-4ae3-933a-bf45a46a73d4: url('https://edifyschoolbengaluru.com/wp-content/plugins/elementskit-lite/widgets/init/assets/img/sort_asc.png');}table.dataTable thead .sorting_desc{--wpr-bg-a105793b-6d7c-4764-8017-bb540bb1ab94: url('https://edifyschoolbengaluru.com/wp-content/plugins/elementskit-lite/widgets/init/assets/img/sort_desc.png');}table.dataTable thead .sorting_asc_disabled{--wpr-bg-e596fd78-2ba6-4646-a61a-0c3861f1a7a8: url('https://edifyschoolbengaluru.com/wp-content/plugins/elementskit-lite/widgets/init/assets/img/sort_asc_disabled.png');}.rll-youtube-player .play{--wpr-bg-dd6018e6-fd15-4560-bd0b-a9c4def34369: url('https://edifyschoolbengaluru.com/wp-content/plugins/wp-rocket/assets/img/youtube.png');}</style>
+</noscript>
+<script type="application/javascript">const rocket_pairs = [{"selector":".elementor-58 .elementor-element.elementor-element-deed5fc:not(.elementor-motion-effects-element-type-background), .elementor-58 .elementor-element.elementor-element-deed5fc > .elementor-motion-effects-container > .elementor-motion-effects-layer","style":".elementor-58 .elementor-element.elementor-element-deed5fc:not(.elementor-motion-effects-element-type-background), .elementor-58 .elementor-element.elementor-element-deed5fc > .elementor-motion-effects-container > .elementor-motion-effects-layer{--wpr-bg-117c2c1d-21b1-42ce-be56-e5a5f48082c2: url('https:\/\/edifyschoolbengaluru.com\/wp-content\/uploads\/2023\/04\/WhatsApp-Image-2023-04-20-at-4.24.46-PM.jpeg');}","hash":"117c2c1d-21b1-42ce-be56-e5a5f48082c2","url":"https:\/\/edifyschoolbengaluru.com\/wp-content\/uploads\/2023\/04\/WhatsApp-Image-2023-04-20-at-4.24.46-PM.jpeg"},{"selector":".elementor-240 .elementor-element.elementor-element-f5e7772:not(.elementor-motion-effects-element-type-background), .elementor-240 .elementor-element.elementor-element-f5e7772 > .elementor-motion-effects-container > .elementor-motion-effects-layer","style":".elementor-240 .elementor-element.elementor-element-f5e7772:not(.elementor-motion-effects-element-type-background), .elementor-240 .elementor-element.elementor-element-f5e7772 > .elementor-motion-effects-container > .elementor-motion-effects-layer{--wpr-bg-944ef0d7-46be-4254-8b06-03c9e2631b28: url('https:\/\/edifyschoolbengaluru.com\/wp-content\/uploads\/2023\/05\/VIEW-03-1-scaled.jpg');}","hash":"944ef0d7-46be-4254-8b06-03c9e2631b28","url":"https:\/\/edifyschoolbengaluru.com\/wp-content\/uploads\/2023\/05\/VIEW-03-1-scaled.jpg"},{"selector":"table.dataTable thead .sorting","style":"table.dataTable thead .sorting{--wpr-bg-ed098207-b13b-47b2-8bcc-a744c9cb7d84: url('https:\/\/edifyschoolbengaluru.com\/wp-content\/plugins\/elementskit-lite\/widgets\/init\/assets\/img\/arrow.png');}","hash":"ed098207-b13b-47b2-8bcc-a744c9cb7d84","url":"https:\/\/edifyschoolbengaluru.com\/wp-content\/plugins\/elementskit-lite\/widgets\/init\/assets\/img\/arrow.png"},{"selector":"table.dataTable thead .sorting_asc","style":"table.dataTable thead .sorting_asc{--wpr-bg-6ac8becc-b71e-4ae3-933a-bf45a46a73d4: url('https:\/\/edifyschoolbengaluru.com\/wp-content\/plugins\/elementskit-lite\/widgets\/init\/assets\/img\/sort_asc.png');}","hash":"6ac8becc-b71e-4ae3-933a-bf45a46a73d4","url":"https:\/\/edifyschoolbengaluru.com\/wp-content\/plugins\/elementskit-lite\/widgets\/init\/assets\/img\/sort_asc.png"},{"selector":"table.dataTable thead .sorting_desc","style":"table.dataTable thead .sorting_desc{--wpr-bg-a105793b-6d7c-4764-8017-bb540bb1ab94: url('https:\/\/edifyschoolbengaluru.com\/wp-content\/plugins\/elementskit-lite\/widgets\/init\/assets\/img\/sort_desc.png');}","hash":"a105793b-6d7c-4764-8017-bb540bb1ab94","url":"https:\/\/edifyschoolbengaluru.com\/wp-content\/plugins\/elementskit-lite\/widgets\/init\/assets\/img\/sort_desc.png"},{"selector":"table.dataTable thead .sorting_asc_disabled","style":"table.dataTable thead .sorting_asc_disabled{--wpr-bg-e596fd78-2ba6-4646-a61a-0c3861f1a7a8: url('https:\/\/edifyschoolbengaluru.com\/wp-content\/plugins\/elementskit-lite\/widgets\/init\/assets\/img\/sort_asc_disabled.png');}","hash":"e596fd78-2ba6-4646-a61a-0c3861f1a7a8","url":"https:\/\/edifyschoolbengaluru.com\/wp-content\/plugins\/elementskit-lite\/widgets\/init\/assets\/img\/sort_asc_disabled.png"},{"selector":".rll-youtube-player .play","style":".rll-youtube-player .play{--wpr-bg-dd6018e6-fd15-4560-bd0b-a9c4def34369: url('https:\/\/edifyschoolbengaluru.com\/wp-content\/plugins\/wp-rocket\/assets\/img\/youtube.png');}","hash":"dd6018e6-fd15-4560-bd0b-a9c4def34369","url":"https:\/\/edifyschoolbengaluru.com\/wp-content\/plugins\/wp-rocket\/assets\/img\/youtube.png"}]; const rocket_excluded_pairs = [];</script></head>
+<body class="page-template-default page page-id-58 page-child parent-pageid-55 elementor-default elementor-kit-8 elementor-page elementor-page-58">
+
+		<e-page-transition preloader-type="image" preloader-image-url="https://edifyschoolbengaluru.com/wp-content/uploads/2023/04/32.png" class="e-page-transition--entering" exclude="^https\:\/\/edifyschoolbengaluru\.com\/wp\-admin\/">
+					</e-page-transition>
+		
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		<div data-elementor-type="header" data-elementor-id="13" class="elementor elementor-13 elementor-location-header" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-ad3da23 e-con-full elementor-hidden-desktop e-flex e-con e-parent" data-id="ad3da23" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+		<div class="elementor-element elementor-element-1573d8c e-con-full e-flex e-con e-child" data-id="1573d8c" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-09439b6 elementor-widget elementor-widget-image" data-id="09439b6" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;slideInUp&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+														<a href="https://edifyschoolbengaluru.com/">
+							<img width="800" height="534" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20800%20534'%3E%3C/svg%3E" class="attachment-large size-large wp-image-4905" alt="" data-lazy-srcset="https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-1024x684.png 1024w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-300x200.png 300w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-768x513.png 768w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-1536x1026.png 1536w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-2048x1368.png 2048w" data-lazy-sizes="(max-width: 800px) 100vw, 800px" data-lazy-src="https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-1024x684.png" /><noscript><img width="800" height="534" src="https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-1024x684.png" class="attachment-large size-large wp-image-4905" alt="" srcset="https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-1024x684.png 1024w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-300x200.png 300w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-768x513.png 768w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-1536x1026.png 1536w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-2048x1368.png 2048w" sizes="(max-width: 800px) 100vw, 800px" /></noscript>								</a>
+													</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-bac6b54 e-con-full ekit-sticky--top e-flex e-con e-child" data-id="bac6b54" data-element_type="container" data-settings="{&quot;ekit_sticky&quot;:&quot;top&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;,&quot;ekit_sticky_offset&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;ekit_sticky_offset_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;ekit_sticky_offset_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;ekit_sticky_on_desktop&quot;:&quot;desktop&quot;,&quot;ekit_sticky_on_tablet&quot;:&quot;tablet&quot;,&quot;ekit_sticky_on_mobile&quot;:&quot;mobile&quot;,&quot;ekit_sticky_effect_offset&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;ekit_sticky_effect_offset_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;ekit_sticky_effect_offset_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
+		<div class="elementor-element elementor-element-d9f714d e-con-full e-flex e-con e-child" data-id="d9f714d" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-305a64a ekit-off-canvas-position-left elementor-widget elementor-widget-elementskit-header-offcanvas" data-id="305a64a" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="elementskit-header-offcanvas.default">
+				<div class="elementor-widget-container">
+			<div class="ekit-wid-con" >        <div class="ekit-offcanvas-toggle-wraper before">
+            <a href="#" class="ekit_navSidebar-button ekit_offcanvas-sidebar" aria-label="offcanvas-menu">
+                <i aria-hidden="true" class="icon icon-burger-menu"></i>&nbsp;Menu            </a>
+        </div>
+        <!-- offset cart strart -->
+        <!-- sidebar cart item -->
+        <div class="ekit-sidebar-group info-group ekit-slide" data-settings="{&quot;disable_bodyscroll&quot;:&quot;yes&quot;}">
+            <div class="ekit-overlay ekit-bg-black"></div>
+            <div class="ekit-sidebar-widget">
+                <div class="ekit_sidebar-widget-container">
+                    <div class="ekit_widget-heading before">
+                        <a href="#" class="ekit_close-side-widget" aria-label="close-icon">
+
+							<i aria-hidden="true" class="icon icon-cross"></i>
+                        </a>
+                    </div>
+                    <div class="ekit_sidebar-textwidget">
+                        
+		<div class="widgetarea_warper widgetarea_warper_editable" data-elementskit-widgetarea-key="e202912"  data-elementskit-widgetarea-index="99">
+			<div class="widgetarea_warper_edit" data-elementskit-widgetarea-key="e202912" data-elementskit-widgetarea-index="99">
+				<i class="eicon-edit" aria-hidden="true"></i>
+				<span>Edit Content</span>
+			</div>
+
+								<div class="elementor-widget-container">
+							<div data-elementor-type="wp-post" data-elementor-id="4975" class="elementor elementor-4975" data-elementor-post-type="elementskit_content">
+				<div class="elementor-element elementor-element-a04755d e-flex e-con-boxed e-con e-parent" data-id="a04755d" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-cedf7ba elementor-search-form--skin-classic elementor-search-form--button-type-icon elementor-search-form--icon-search elementor-widget elementor-widget-search-form" data-id="cedf7ba" data-element_type="widget" data-settings="{&quot;skin&quot;:&quot;classic&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="search-form.default">
+				<div class="elementor-widget-container">
+					<search role="search">
+			<form class="elementor-search-form" action="https://edifyschoolbengaluru.com" method="get">
+												<div class="elementor-search-form__container">
+					<label class="elementor-screen-only" for="elementor-search-form-cedf7ba">Search</label>
+
+					
+					<input id="elementor-search-form-cedf7ba" placeholder="Search For..." class="elementor-search-form__input" type="search" name="s" value="">
+					
+											<button class="elementor-search-form__submit" type="submit" aria-label="Search">
+															<i aria-hidden="true" class="fas fa-search"></i>								<span class="elementor-screen-only">Search</span>
+													</button>
+					
+									</div>
+			</form>
+		</search>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-ad76218 elementor-widget elementor-widget-ekit-vertical-menu" data-id="ad76218" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="ekit-vertical-menu.default">
+				<div class="elementor-widget-container">
+			<div class="ekit-wid-con">        <div 
+            class="ekit-vertical-main-menu-wraper   badge-position-left"
+        >
+                        <div class="ekit-vertical-menu-container"><ul id="menu-mobile-tab-menu" class="ekit-vertical-navbar-nav submenu-click-on-icon"><li id="menu-item-1090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1090 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/" class="ekit-menu-nav-link">Home</a></li>
+<li id="menu-item-5373" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-5373 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Who we are<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-1085" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-58 current_page_item menu-item-1085 nav-item elementskit-mobile-builder-content active" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/about-the-school/" class=" dropdown-item active">About the School</a>	<li id="menu-item-1084" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1084 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/vision-mission/" class=" dropdown-item">Vision Mission</a>	<li id="menu-item-1086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1086 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/quality-policy/" class=" dropdown-item">Quality Policy</a>	<li id="menu-item-2952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2952 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/principal-director-speak/" class=" dropdown-item">Principal Speak</a>	<li id="menu-item-2953" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2953 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/president-speak/" class=" dropdown-item">President Speak</a>	<li id="menu-item-1088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1088 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/ho-support-team/" class=" dropdown-item">HO Support Team</a>	<li id="menu-item-2954" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2954 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/academic-administrators/" class=" dropdown-item">Academic Administrators</a>	<li id="menu-item-1089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1089 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/about-trust/" class=" dropdown-item">About Trust</a>	<li id="menu-item-1091" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1091 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/edify-education/" class=" dropdown-item">Edify Education</a>	<li id="menu-item-2956" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2956 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/mandatory-public-disclosures/" class=" dropdown-item">Mandatory Public Disclosures</a></ul>
+</li>
+<li id="menu-item-5374" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5374 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Programs<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-1079" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1079 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/programs/esp/" class=" dropdown-item">ESP (IK1-IK3)</a>	<li id="menu-item-1080" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1080 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/programs/psp/" class=" dropdown-item">PSP (1-5)</a>	<li id="menu-item-1081" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1081 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/programs/msp/" class=" dropdown-item">MSP (6-9)</a>	<li id="menu-item-1082" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1082 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/programs/ssp/" class=" dropdown-item">SSP (11&amp;12)</a></ul>
+</li>
+<li id="menu-item-5375" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5375 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Academics<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-1042" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1042 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/academics-philosophy/" class=" dropdown-item">Academics Philosophy</a>	<li id="menu-item-5380" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5380 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="#" class=" dropdown-item">Curriculum<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+	<ul class="elementskit-dropdown elementskit-submenu-panel">
+		<li id="menu-item-1044" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1044 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/curriculum/what-is-3c/" class=" dropdown-item">What is 3C</a>		<li id="menu-item-1045" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1045 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/curriculum/theme-in-3c/" class=" dropdown-item">Theme in 3C</a>		<li id="menu-item-1046" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1046 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/curriculum/profiles-in-3c/" class=" dropdown-item">Profiles in 3C</a>		<li id="menu-item-1047" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1047 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/curriculum/assessment-in-3c/" class=" dropdown-item">Assessment in 3C</a>	</ul>
+	<li id="menu-item-1048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1048 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/pedagogy/" class=" dropdown-item">Pedagogy</a>	<li id="menu-item-1049" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1049 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/assessment/" class=" dropdown-item">Assessment</a>	<li id="menu-item-1050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1050 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/yearly-planner/" class=" dropdown-item">Yearly Planner</a>	<li id="menu-item-1041" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1041 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/school-calender/" class=" dropdown-item">School Calender</a></ul>
+</li>
+<li id="menu-item-5376" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5376 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Beyond Classroom<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-1059" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1059 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/value-education-programme/" class=" dropdown-item">Value Education Programme</a>	<li id="menu-item-1060" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1060 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/gender-sensitivity-programe/" class=" dropdown-item">Gender Sensitivity Programme</a>	<li id="menu-item-1061" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1061 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/life-skills-programme/" class=" dropdown-item">Life Skills Programme</a>	<li id="menu-item-1062" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1062 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/community-outreach/" class=" dropdown-item">Community Outreach</a>	<li id="menu-item-1063" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1063 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/student-wellness-programme/" class=" dropdown-item">Student Wellness Programme</a>	<li id="menu-item-1064" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1064 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/dear-program/" class=" dropdown-item">DEAR Programme</a>	<li id="menu-item-1093" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1093 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/sports-education-programme/" class=" dropdown-item">Sports Education Programme</a>	<li id="menu-item-1094" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1094 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/arts-education-programme/" class=" dropdown-item">Arts Education Programme</a>	<li id="menu-item-1095" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1095 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/personality-development-workshops/" class=" dropdown-item">Personality Development Workshops</a>	<li id="menu-item-1096" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1096 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/student-exchange-program/" class=" dropdown-item">Student Exchange Program</a>	<li id="menu-item-1097" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1097 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/spoken-foreign-language/" class=" dropdown-item">Spoken Foreign Language</a>	<li id="menu-item-1098" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1098 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/clubs/" class=" dropdown-item">Clubs</a></ul>
+</li>
+<li id="menu-item-5377" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5377 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Facilities<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-1069" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1069 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/facilities/transport/" class=" dropdown-item">Transport</a>	<li id="menu-item-1071" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1071 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/facilities/infrastructure/" class=" dropdown-item">Infrastructure</a>	<li id="menu-item-1072" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1072 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/facilities/health-care/" class=" dropdown-item">Health Care</a>	<li id="menu-item-1073" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1073 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/facilities/labs/" class=" dropdown-item">Labs</a>	<li id="menu-item-1074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1074 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/facilities/resource-center/" class=" dropdown-item">Resource Center</a>	<li id="menu-item-2972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2972 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/facilities/teachers-training/" class=" dropdown-item">Teachers Training</a>	<li id="menu-item-1075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1075 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/facilities/technology/" class=" dropdown-item">Technology</a></ul>
+</li>
+<li id="menu-item-5378" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5378 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Admissions<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-1052" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1052 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/admissions/admissions-philosophy/" class=" dropdown-item">Philosophy</a>	<li id="menu-item-1053" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1053 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/admissions/admission-procedure/" class=" dropdown-item">Admission Procedure</a>	<li id="menu-item-1054" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1054 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/admissions/fee-structure/" class=" dropdown-item">Fee Structure</a>	<li id="menu-item-1056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1056 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/admissions/online-admissions/" class=" dropdown-item">Online Application Form</a></ul>
+</li>
+<li id="menu-item-5379" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5379 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Updates<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-2969" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2969 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/achievements/" class=" dropdown-item">Achievements</a>	<li id="menu-item-2968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2968 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/alumni/" class=" dropdown-item">Alumni</a>	<li id="menu-item-2967" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2967 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/school-events/" class=" dropdown-item">School Events</a>	<li id="menu-item-2966" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2966 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/edify-voice/" class=" dropdown-item">Edify Voice</a>	<li id="menu-item-2965" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2965 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/newsletter/" class=" dropdown-item">Newsletter</a>	<li id="menu-item-2970" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2970 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/gallery/" class=" dropdown-item">Gallery</a>	<li id="menu-item-2964" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2964 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/faqs/" class=" dropdown-item">FAQ’s</a>	<li id="menu-item-2963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2963 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/student-council/" class=" dropdown-item">Student Council</a></ul>
+</li>
+<li id="menu-item-2971" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2971 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/fit-edify/" class="ekit-menu-nav-link">Fit Edify</a></li>
+<li id="menu-item-1065" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1065 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/blogs/" class="ekit-menu-nav-link">Blogs</a></li>
+<li id="menu-item-1066" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1066 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/careers/" class="ekit-menu-nav-link">Careers</a></li>
+<li id="menu-item-1067" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1067 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/contact/contact-us/" class="ekit-menu-nav-link">Contact Us</a></li>
+</ul></div>        </div>
+        </div>		</div>
+				</div>
+					</div>
+				</div>
+				</div>
+							</div>
+						</div>
+		 
+                    </div>
+                </div>
+            </div>
+        </div> <!-- END sidebar widget item -->
+        <!-- END offset cart strart -->
+        </div>		</div>
+				</div>
+				</div>
+		<a class="elementor-element elementor-element-2056759 e-con-full e-flex e-con e-child" data-id="2056759" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}" href="https://vvnedify.schoolelement.in/enquiries">
+				<div class="elementor-element elementor-element-66b31ce elementor-icon-list--layout-inline elementor-mobile-align-left elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="66b31ce" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items elementor-inline-items">
+							<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-envelope-open-text"></i>						</span>
+										<span class="elementor-icon-list-text">Admissions</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+				</a>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-f64fa3e e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-parent" data-id="f64fa3e" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+		<div class="elementor-element elementor-element-27f27d2 e-con-full e-flex e-con e-child" data-id="27f27d2" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+		<div class="elementor-element elementor-element-017101a e-con-full e-flex e-con e-child" data-id="017101a" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+		<div class="elementor-element elementor-element-e8a08f9 e-con-full elementor-hidden-mobile e-flex e-con e-child" data-id="e8a08f9" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-7536c73 elementor-icon-list--layout-inline elementor-mobile-align-center elementor-widget__width-inherit elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="7536c73" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items elementor-inline-items">
+							<li class="elementor-icon-list-item elementor-inline-item">
+											<a href="tel:+919916526999">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-phone-alt"></i>						</span>
+										<span class="elementor-icon-list-text">+91-9916526999 +91- 7022895987 / 88</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item elementor-inline-item">
+											<a href="mailto:info@edifyschoolbengaluru.com">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-mail-bulk"></i>						</span>
+										<span class="elementor-icon-list-text">info@edifyschoolbengaluru.com</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-6f445fe e-con-full elementor-hidden-tablet e-flex e-con e-child" data-id="6f445fe" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-e52745f elementor-widget__width-initial elementor-widget elementor-widget-elementskit-social-media" data-id="e52745f" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="elementskit-social-media.default">
+				<div class="elementor-widget-container">
+			<div class="ekit-wid-con" >			 <ul class="ekit_social_media">
+														<li class="elementor-repeater-item-5eb0945">
+					    <a
+						href="https://www.facebook.com/people/Edifyschool-Kanakapura-Road/100003973727403/?mibextid=ZbWKwL" aria-label="Facebook" class="facebook" >
+														
+							<i aria-hidden="true" class="icon icon-facebook"></i>									
+                                                                                                            </a>
+                    </li>
+                    														<li class="elementor-repeater-item-e2aa959">
+					    <a
+						href="https://www.instagram.com/edifyschoolkanakapuramainroad/?igshid=a2F4aWwyMTdpaDRv" aria-label="Instagram" class="1" >
+														
+							<i aria-hidden="true" class="icon icon-instagram-1"></i>									
+                                                                                                            </a>
+                    </li>
+                    														<li class="elementor-repeater-item-e9f752e">
+					    <a
+						href="https://www.youtube.com/c/EdifySchoolKanakapuraMainRoad" aria-label="Youtube" class="v" >
+														
+							<i aria-hidden="true" class="icon icon-youtube-v"></i>									
+                                                                                                            </a>
+                    </li>
+                    														<li class="elementor-repeater-item-404d637">
+					    <a
+						href="https://twitter.com/edifykanakapura" aria-label="Twitter" class="" >
+														
+							<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" fill="none" viewBox="0 0 512 512" id="twitter"><g clip-path="url(#clip0_84_15698)"><rect width="512" height="512" fill="#fff" rx="60"></rect><path fill="#000" d="M355.904 100H408.832L293.2 232.16L429.232 412H322.72L239.296 302.928L143.84 412H90.8805L214.56 270.64L84.0645 100H193.28L268.688 199.696L355.904 100ZM337.328 380.32H366.656L177.344 130.016H145.872L337.328 380.32Z"></path></g><defs><clipPath id="clip0_84_15698"><rect width="512" height="512" fill="#fff"></rect></clipPath></defs></svg>									
+                                                                                                            </a>
+                    </li>
+                    							</ul>
+		</div>		</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-6ab82e2 e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-parent" data-id="6ab82e2" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+		<div class="elementor-element elementor-element-b41d550 e-con-full e-flex e-con e-child" data-id="b41d550" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+		<div class="elementor-element elementor-element-157a679 e-con-full myboxcut e-flex e-con e-child" data-id="157a679" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-72a215a elementor-widget elementor-widget-spacer" data-id="72a215a" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-ea50371 e-con-full e-flex e-con e-child" data-id="ea50371" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-dab8168 elementor-widget elementor-widget-elementskit-fancy-animated-text" data-id="dab8168" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="elementskit-fancy-animated-text.default">
+				<div class="elementor-widget-container">
+			<div class="ekit-wid-con" >            <h2 class="ekit-fancy-text clip is-full-width" data-id="dab8168" data-animation-settings="{&quot;animationStyle&quot;:&quot;animated&quot;,&quot;animationDelay&quot;:2500,&quot;loadingBar&quot;:3800,&quot;lettersDelay&quot;:50,&quot;typeLettersDelay&quot;:150,&quot;duration&quot;:500,&quot;revealDuration&quot;:600,&quot;revealAnimationDelay&quot;:1500}">
+                            <span class="ekit-fancy-prefix-text">Edify is</span>
+                        <span class="ekit-fancy-text-lists">
+                                        <b class="ekit-fancy-text elementor-repeater-item-9e3ab30 is-visible">Leading</b>
+                                        <b class="ekit-fancy-text elementor-repeater-item-01a2e70 ">Inspiring</b>
+                                        <b class="ekit-fancy-text elementor-repeater-item-06bc2fa ">Nurturing</b>
+                                        <b class="ekit-fancy-text elementor-repeater-item-6af81cd ">Empowering</b>
+                                    </span>
+                        <span class="ekit-fancy-suffix-text">Young India</span>
+                    </h2>
+        </div>		</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-40e442e e-con-full e-flex e-con e-child" data-id="40e442e" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-ed77c4e elementor-search-form--skin-classic elementor-search-form--button-type-icon elementor-search-form--icon-search elementor-widget elementor-widget-search-form" data-id="ed77c4e" data-element_type="widget" data-settings="{&quot;skin&quot;:&quot;classic&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="search-form.default">
+				<div class="elementor-widget-container">
+					<search role="search">
+			<form class="elementor-search-form" action="https://edifyschoolbengaluru.com" method="get">
+												<div class="elementor-search-form__container">
+					<label class="elementor-screen-only" for="elementor-search-form-ed77c4e">Search</label>
+
+					
+					<input id="elementor-search-form-ed77c4e" placeholder="Search For..." class="elementor-search-form__input" type="search" name="s" value="">
+					
+											<button class="elementor-search-form__submit" type="submit" aria-label="Search">
+															<i aria-hidden="true" class="fas fa-search"></i>								<span class="elementor-screen-only">Search</span>
+													</button>
+					
+									</div>
+			</form>
+		</search>
+				</div>
+				</div>
+				</div>
+		<a class="elementor-element elementor-element-46b3b1d e-con-full e-flex e-con e-child" data-id="46b3b1d" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}" href="https://vvnedify.schoolelement.in/enquiries">
+		<div class="elementor-element elementor-element-e921d88 e-con-full e-flex e-con e-child" data-id="e921d88" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+		<div class="elementor-element elementor-element-de4f34e e-con-full e-flex e-con e-child" data-id="de4f34e" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-5fa1dad elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="5fa1dad" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Enroll Now</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-ace0065 elementor-widget__width-initial elementor-view-default elementor-widget elementor-widget-icon" data-id="ace0065" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+			<i aria-hidden="true" class="fas fa-chevron-right"></i>			</div>
+		</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</a>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-c50fe08 e-con-full elementor-hidden-tablet elementor-hidden-mobile e-transform e-flex e-con e-parent" data-id="c50fe08" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_transform_translateY_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-1,&quot;sizes&quot;:[]},&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;,&quot;_transform_translateX_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
+		<a class="elementor-element elementor-element-1e8dd73 e-con-full e-flex e-con e-child" data-id="1e8dd73" data-element_type="container" data-settings="{&quot;position&quot;:&quot;absolute&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}" href="https://edifyschoolbengaluru.com/">
+				<div class="elementor-element elementor-element-180a4b8 elementor-widget elementor-widget-image" data-id="180a4b8" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+													<img width="3089" height="2063" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%203089%202063'%3E%3C/svg%3E" class="attachment-full size-full wp-image-4905" alt="" data-lazy-srcset="https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo.png 3089w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-300x200.png 300w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-1024x684.png 1024w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-768x513.png 768w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-1536x1026.png 1536w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-2048x1368.png 2048w" data-lazy-sizes="(max-width: 3089px) 100vw, 3089px" data-lazy-src="https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo.png" /><noscript><img width="3089" height="2063" src="https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo.png" class="attachment-full size-full wp-image-4905" alt="" srcset="https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo.png 3089w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-300x200.png 300w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-1024x684.png 1024w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-768x513.png 768w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-1536x1026.png 1536w, https://edifyschoolbengaluru.com/wp-content/uploads/2024/02/Kanakapura-Lgo-2048x1368.png 2048w" sizes="(max-width: 3089px) 100vw, 3089px" /></noscript>													</div>
+				</div>
+				</a>
+				<div class="elementor-element elementor-element-ac6d8d5 elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-ekit-nav-menu" data-id="ac6d8d5" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="ekit-nav-menu.default">
+				<div class="elementor-widget-container">
+					<nav class="ekit-wid-con ekit_menu_responsive_tablet" 
+			data-hamburger-icon="" 
+			data-hamburger-icon-type="icon" 
+			data-responsive-breakpoint="1024">
+			            <button class="elementskit-menu-hamburger elementskit-menu-toggler"  type="button" aria-label="hamburger-icon">
+                                    <span class="elementskit-menu-hamburger-icon"></span><span class="elementskit-menu-hamburger-icon"></span><span class="elementskit-menu-hamburger-icon"></span>
+                            </button>
+            <div id="ekit-megamenu-main-menu" class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page- ekit-nav-dropdown-hover"><ul id="menu-main-menu" class="elementskit-navbar-nav elementskit-menu-po-right submenu-click-on-icon"><li id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-71 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/" class="ekit-menu-nav-link">Home</a></li>
+<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-72 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Who we are<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-58 current_page_item menu-item-75 nav-item elementskit-mobile-builder-content active" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/about-the-school/" class=" dropdown-item active">About the School</a>	<li id="menu-item-842" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-842 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/vision-mission/" class=" dropdown-item">Vision Mission</a>	<li id="menu-item-843" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-843 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/quality-policy/" class=" dropdown-item">Quality Policy</a>	<li id="menu-item-2894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2894 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/principal-director-speak/" class=" dropdown-item">Principal Speak</a>	<li id="menu-item-2895" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2895 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/president-speak/" class=" dropdown-item">President Speak</a>	<li id="menu-item-845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-845 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/ho-support-team/" class=" dropdown-item">HO Support Team</a>	<li id="menu-item-2896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2896 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/academic-administrators/" class=" dropdown-item">Academic Administrators</a>	<li id="menu-item-846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-846 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/about-trust/" class=" dropdown-item">About Trust</a>	<li id="menu-item-847" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-847 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/who-we-are/edify-education/" class=" dropdown-item">Edify Education</a>	<li id="menu-item-2958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2958 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/mandatory-public-disclosures/" class=" dropdown-item">Mandatory Public Disclosures</a></ul>
+</li>
+<li id="menu-item-873" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-873 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/programs/" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Programs<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-877 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/programs/esp/" class=" dropdown-item">ESP (IK1-IK3)</a>	<li id="menu-item-876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-876 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/programs/psp/" class=" dropdown-item">PSP (1-5)</a>	<li id="menu-item-875" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-875 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/programs/msp/" class=" dropdown-item">MSP (6-9)</a>	<li id="menu-item-874" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-874 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/programs/ssp/" class=" dropdown-item">SSP (11&amp;12)</a></ul>
+</li>
+<li id="menu-item-140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-140 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Academics<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/academics-philosophy/" class=" dropdown-item">Academics Philosophy</a>	<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-144 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/curriculum/" class=" dropdown-item">Curriculum<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+	<ul class="elementskit-dropdown elementskit-submenu-panel">
+		<li id="menu-item-890" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-890 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/curriculum/what-is-3c/" class=" dropdown-item">What is 3C</a>		<li id="menu-item-889" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-889 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/curriculum/theme-in-3c/" class=" dropdown-item">Theme in 3C</a>		<li id="menu-item-888" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-888 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/curriculum/profiles-in-3c/" class=" dropdown-item">Profiles in 3C</a>		<li id="menu-item-887" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-887 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/curriculum/assessment-in-3c/" class=" dropdown-item">Assessment in 3C</a>	</ul>
+	<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/pedagogy/" class=" dropdown-item">Pedagogy</a>	<li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/assessment/" class=" dropdown-item">Assessment</a>	<li id="menu-item-893" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-893 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/yearly-planner/" class=" dropdown-item">Yearly Planner</a>	<li id="menu-item-146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/academics/school-calender/" class=" dropdown-item">School Calender</a></ul>
+</li>
+<li id="menu-item-188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-188 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Beyond Classroom<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-917 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/value-education-programme/" class=" dropdown-item">Value Education Programme</a>	<li id="menu-item-916" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-916 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/gender-sensitivity-programe/" class=" dropdown-item">Gender Sensitivity Programme</a>	<li id="menu-item-197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/life-skills-programme/" class=" dropdown-item">Life Skills Programme</a>	<li id="menu-item-196" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-196 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/community-outreach/" class=" dropdown-item">Community Outreach</a>	<li id="menu-item-195" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-195 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/student-wellness-programme/" class=" dropdown-item">Student Wellness Programme</a>	<li id="menu-item-194" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-194 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/dear-program/" class=" dropdown-item">DEAR Programme</a>	<li id="menu-item-193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-193 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/sports-education-programme/" class=" dropdown-item">Sports Education Programme</a>	<li id="menu-item-915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-915 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/arts-education-programme/" class=" dropdown-item">Arts Education Programme</a>	<li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/personality-development-workshops/" class=" dropdown-item">Personality Development Workshops</a>	<li id="menu-item-918" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-918 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/student-exchange-program/" class=" dropdown-item">Student Exchange Program</a>	<li id="menu-item-190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-190 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/spoken-foreign-language/" class=" dropdown-item">Spoken Foreign Language</a>	<li id="menu-item-189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-189 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/beyond-classroom/clubs/" class=" dropdown-item">Clubs</a></ul>
+</li>
+<li id="menu-item-940" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-940 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/facilities/" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Facilities<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-947" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-947 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/facilities/transport/" class=" dropdown-item">Transport</a>	<li id="menu-item-945" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-945 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/facilities/infrastructure/" class=" dropdown-item">Infrastructure</a>	<li id="menu-item-944" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-944 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/facilities/health-care/" class=" dropdown-item">Health Care</a>	<li id="menu-item-943" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-943 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/facilities/labs/" class=" dropdown-item">Labs</a>	<li id="menu-item-942" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-942 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/facilities/resource-center/" class=" dropdown-item">Resource Center</a>	<li id="menu-item-2903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2903 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/facilities/teachers-training/" class=" dropdown-item">Teachers Training</a>	<li id="menu-item-941" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-941 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/facilities/technology/" class=" dropdown-item">Technology</a></ul>
+</li>
+<li id="menu-item-98" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-98 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/admissions/" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Admissions<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/admissions/admissions-philosophy/" class=" dropdown-item">Philosophy</a>	<li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/admissions/admission-procedure/" class=" dropdown-item">Admission Procedure</a>	<li id="menu-item-857" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-857 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/admissions/fee-structure/" class=" dropdown-item">Fee Structure</a>	<li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/admissions/online-admissions/" class=" dropdown-item">Online Application Form</a></ul>
+</li>
+<li id="menu-item-2931" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2931 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Updates<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-2938" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2938 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/achievements/" class=" dropdown-item">Achievements</a>	<li id="menu-item-2937" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2937 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/alumni/" class=" dropdown-item">Alumni</a>	<li id="menu-item-2936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2936 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/school-events/" class=" dropdown-item">School Events</a>	<li id="menu-item-2935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2935 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/edify-voice/" class=" dropdown-item">Edify Voice</a>	<li id="menu-item-2934" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2934 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/newsletter/" class=" dropdown-item">Newsletter</a>	<li id="menu-item-2939" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2939 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/gallery/" class=" dropdown-item">Gallery</a>	<li id="menu-item-2933" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2933 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/faqs/" class=" dropdown-item">FAQ’s</a>	<li id="menu-item-2932" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2932 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/updates/student-council/" class=" dropdown-item">Student Council</a></ul>
+</li>
+<li id="menu-item-2951" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2951 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/fit-edify/" class="ekit-menu-nav-link">Fit Edify</a></li>
+<li id="menu-item-5086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5086 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="https://edifyschoolbengaluru.com/careers/" class="ekit-menu-nav-link">Careers</a></li>
+</ul><div class="elementskit-nav-identity-panel">
+				<div class="elementskit-site-title">
+					<a class="elementskit-nav-logo" href="https://edifyschoolbengaluru.com" target="_self" rel="">
+						<img src="" title="" alt="" />
+					</a> 
+				</div><button class="elementskit-menu-close elementskit-menu-toggler" type="button">X</button></div></div>			
+			<div class="elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler ekit-nav-menu--overlay"></div>        </nav>
+				</div>
+				</div>
+				</div>
+				</div>
+		
+<main id="content" class="site-main post-58 page type-page status-publish hentry">
+
+	
+	<div class="page-content">
+				<div data-elementor-type="wp-page" data-elementor-id="58" class="elementor elementor-58" data-elementor-post-type="page">
+				<div class="elementor-element elementor-element-deed5fc e-flex e-con-boxed e-con e-parent" data-id="deed5fc" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-3a1ef3b e-flex e-con-boxed e-con e-child" data-id="3a1ef3b" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-4210194 elementor-widget elementor-widget-heading" data-id="4210194" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">About the school</h2>		</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-adfdfba e-flex e-con-boxed e-con e-child" data-id="adfdfba" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-b8620ea elementor-align-center elementor-widget elementor-widget-breadcrumbs" data-id="b8620ea" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="breadcrumbs.default">
+				<div class="elementor-widget-container">
+			<p id="breadcrumbs"><span><span><a href="https://edifyschoolbengaluru.com/">Home</a></span> » <span><a href="https://edifyschoolbengaluru.com/who-we-are/">Who we are</a></span> » <span class="breadcrumb_last" aria-current="page"><strong>About the School</strong></span></span></p>		</div>
+				</div>
+					</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-c425066 e-flex e-con-boxed e-con e-parent" data-id="c425066" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-5512d2f e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child" data-id="5512d2f" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-6b87c1f elementor-nav-menu__align-center elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="6b87c1f" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-plus\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+						<nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-underline e--animation-fade">
+				<ul id="menu-1-6b87c1f" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-58 current_page_item menu-item-1295"><a href="https://edifyschoolbengaluru.com/who-we-are/about-the-school/" aria-current="page" class="elementor-item elementor-item-active">About the School</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1296"><a href="https://edifyschoolbengaluru.com/who-we-are/vision-mission/" class="elementor-item">Vision Mission</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1297"><a href="https://edifyschoolbengaluru.com/who-we-are/quality-policy/" class="elementor-item">Quality Policy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2897"><a href="https://edifyschoolbengaluru.com/who-we-are/principal-director-speak/" class="elementor-item">Principal Speak</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2898"><a href="https://edifyschoolbengaluru.com/who-we-are/president-speak/" class="elementor-item">President Speak</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1299"><a href="https://edifyschoolbengaluru.com/who-we-are/ho-support-team/" class="elementor-item">HO Support Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2899"><a href="https://edifyschoolbengaluru.com/who-we-are/academic-administrators/" class="elementor-item">Academic Administrators</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1300"><a href="https://edifyschoolbengaluru.com/who-we-are/about-trust/" class="elementor-item">About Trust</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1301"><a href="https://edifyschoolbengaluru.com/who-we-are/edify-education/" class="elementor-item">Edify Education</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2960"><a href="https://edifyschoolbengaluru.com/updates/student-council/" class="elementor-item">Student Council</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2961"><a href="https://edifyschoolbengaluru.com/mandatory-public-disclosures/" class="elementor-item">Mandatory Public Disclosures</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1304"><a href="https://edifyschoolbengaluru.com/who-we-are/advisory-board/" class="elementor-item">Advisory Board</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1303"><a href="https://edifyschoolbengaluru.com/who-we-are/advisory-board/national-advisory-board/" class="elementor-sub-item">National Advisory Board</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1302"><a href="https://edifyschoolbengaluru.com/who-we-are/advisory-board/regional-advisory-board/" class="elementor-sub-item">Regional Advisory Board</a></li>
+</ul>
+</li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>			<span class="elementor-screen-only">Menu</span>
+		</div>
+					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-6b87c1f" class="elementor-nav-menu sm-vertical"><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-58 current_page_item menu-item-1295"><a href="https://edifyschoolbengaluru.com/who-we-are/about-the-school/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">About the School</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1296"><a href="https://edifyschoolbengaluru.com/who-we-are/vision-mission/" class="elementor-item" tabindex="-1">Vision Mission</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1297"><a href="https://edifyschoolbengaluru.com/who-we-are/quality-policy/" class="elementor-item" tabindex="-1">Quality Policy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2897"><a href="https://edifyschoolbengaluru.com/who-we-are/principal-director-speak/" class="elementor-item" tabindex="-1">Principal Speak</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2898"><a href="https://edifyschoolbengaluru.com/who-we-are/president-speak/" class="elementor-item" tabindex="-1">President Speak</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1299"><a href="https://edifyschoolbengaluru.com/who-we-are/ho-support-team/" class="elementor-item" tabindex="-1">HO Support Team</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2899"><a href="https://edifyschoolbengaluru.com/who-we-are/academic-administrators/" class="elementor-item" tabindex="-1">Academic Administrators</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1300"><a href="https://edifyschoolbengaluru.com/who-we-are/about-trust/" class="elementor-item" tabindex="-1">About Trust</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1301"><a href="https://edifyschoolbengaluru.com/who-we-are/edify-education/" class="elementor-item" tabindex="-1">Edify Education</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2960"><a href="https://edifyschoolbengaluru.com/updates/student-council/" class="elementor-item" tabindex="-1">Student Council</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2961"><a href="https://edifyschoolbengaluru.com/mandatory-public-disclosures/" class="elementor-item" tabindex="-1">Mandatory Public Disclosures</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1304"><a href="https://edifyschoolbengaluru.com/who-we-are/advisory-board/" class="elementor-item" tabindex="-1">Advisory Board</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1303"><a href="https://edifyschoolbengaluru.com/who-we-are/advisory-board/national-advisory-board/" class="elementor-sub-item" tabindex="-1">National Advisory Board</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1302"><a href="https://edifyschoolbengaluru.com/who-we-are/advisory-board/regional-advisory-board/" class="elementor-sub-item" tabindex="-1">Regional Advisory Board</a></li>
+</ul>
+</li>
+</ul>			</nav>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-561124d e-con-full e-flex e-con e-child" data-id="561124d" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+		<div class="elementor-element elementor-element-6853d4a e-flex e-con-boxed e-con e-child" data-id="6853d4a" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-03e5c27 elementor-widget elementor-widget-image" data-id="03e5c27" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+													<img fetchpriority="high" decoding="async" width="768" height="511" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20768%20511'%3E%3C/svg%3E" class="attachment-medium_large size-medium_large wp-image-3037" alt="" data-lazy-srcset="https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/DSC_0614-1536x1021-1-768x511.jpg 768w, https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/DSC_0614-1536x1021-1-300x199.jpg 300w, https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/DSC_0614-1536x1021-1-1024x681.jpg 1024w, https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/DSC_0614-1536x1021-1.jpg 1536w" data-lazy-sizes="(max-width: 768px) 100vw, 768px" data-lazy-src="https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/DSC_0614-1536x1021-1-768x511.jpg" /><noscript><img fetchpriority="high" decoding="async" width="768" height="511" src="https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/DSC_0614-1536x1021-1-768x511.jpg" class="attachment-medium_large size-medium_large wp-image-3037" alt="" srcset="https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/DSC_0614-1536x1021-1-768x511.jpg 768w, https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/DSC_0614-1536x1021-1-300x199.jpg 300w, https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/DSC_0614-1536x1021-1-1024x681.jpg 1024w, https://edifyschoolbengaluru.com/wp-content/uploads/2023/05/DSC_0614-1536x1021-1.jpg 1536w" sizes="(max-width: 768px) 100vw, 768px" /></noscript>													</div>
+				</div>
+					</div>
+				</div>
+				<div class="elementor-element elementor-element-d79d7c8 elementor-widget elementor-widget-text-editor" data-id="d79d7c8" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p><strong>Edify School, Bengaluru</strong> is known for its academic excellence, sports facilities and co-curricular activities. It is one of the best school in Bangalore. Our Edify School in Somanahalli, is powered by a spacious Library, wonder rooms, music rooms, English lab, Math lab and Science labs. The use of technology for teaching and learning makes the learning process most enriching and effective in Edify School, one of the best K 12 Schools in Bangalore.</p><p>In Edify School, Kanakpura, we are at par with all the International Schools in South Bengaluru, and utilize the unique 3C Curriculum which is a balanced and planned methodology keeping on mind the importance of the CBSE Syllabus and International Curriculums and their philosophies and practices. We are experienced in using the 3C content for the unique 3C Curriculum which is a primary programme catering from Nursery to Grade 5 based on the guidelines and frameworks of the best practices of PYP, IGCSE and CBSE. Thus Edify School is one of the few schools in Kanakpura Road that could be considered a CBSE International School in Bangalore.</p><p>The curriculum has been developed after a lot of research and experiment by a dedicated team of committed professionals which ensures overall development of the learners thus equipping them with the ability to face any challenges and uncertainties of the future. Edify School is the top CBSE School in Bengaluru.</p><p>We provide a well structured curriculum which has been designed systematically with rich content, a diverse style of approach, and a flexible and focused methodology with well defined learning outcomes, and are considered one of the top CBSE Schools and primary schools in south Bangalore.</p>						</div>
+				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+				<div class="post-tags">
+					</div>
+			</div>
+
+	
+</main>
+
+			<div data-elementor-type="footer" data-elementor-id="240" class="elementor elementor-240 elementor-location-footer" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-f5e7772 e-con-full e-flex e-con e-parent" data-id="f5e7772" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+		<div class="elementor-element elementor-element-d6c6930 e-con-full e-flex e-con e-child" data-id="d6c6930" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-187e212 elementor-widget elementor-widget-heading" data-id="187e212" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">About Edify</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-7a3af3b elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="7a3af3b" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4951fb1 elementor-widget elementor-widget-text-editor" data-id="4951fb1" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Edify School, Bengaluru is known for its academic excellence, sports facilities and co-curricular activities. It is one of the best school in Bangalore. Our Edify School in Somanahalli, is powered by a spacious Library, wonder rooms, music rooms, English lab, Math lab and Science labs. The use of technology for teaching and learning makes the learning process most enriching and effective in Edify School, one of the best K 12 Schools in Bangalore.</p>						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-27a8280 e-con-full e-flex e-con e-child" data-id="27a8280" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-b8e24de elementor-widget elementor-widget-heading" data-id="b8e24de" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Quick Links</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-fe06f21 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="fe06f21" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6b5487b elementor-list-item-link-inline elementor-align-left elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="6b5487b" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="https://edifyschoolbengaluru.com/admissions/">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-long-arrow-alt-right"></i>						</span>
+										<span class="elementor-icon-list-text">Admissions</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-long-arrow-alt-right"></i>						</span>
+										<span class="elementor-icon-list-text">Fee structure</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://edifyschoolbengaluru.com/programs/">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-long-arrow-alt-right"></i>						</span>
+										<span class="elementor-icon-list-text">Programs</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://edifyschoolbengaluru.com/who-we-are/">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-long-arrow-alt-right"></i>						</span>
+										<span class="elementor-icon-list-text">Who we are</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://edifyschoolbengaluru.com/academics/">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-long-arrow-alt-right"></i>						</span>
+										<span class="elementor-icon-list-text">Academics</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-970820c e-con-full e-flex e-con e-child" data-id="970820c" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-ba366d7 elementor-widget elementor-widget-heading" data-id="ba366d7" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Contact Info</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-f0e7e7f elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="f0e7e7f" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-000a468 elementor-list-item-link-inline elementor-align-left elementor-mobile-align-center elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="000a468" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-map-marker-alt"></i>						</span>
+										<span class="elementor-icon-list-text">226/227, Near 25th Mile, Kanakapura Main Road, Somanahalli, Karnataka 560082</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="tel:+%20919916526999">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-phone-alt"></i>						</span>
+										<span class="elementor-icon-list-text">+ 91 -9916526999</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="tel:7022895987">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-phone-alt"></i>						</span>
+										<span class="elementor-icon-list-text">+91 - 7022895987</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="tel:7022895988">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-phone-alt"></i>						</span>
+										<span class="elementor-icon-list-text">+91 - 7022895988</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="mailto:admissions@edifyschoolbengaluru.com">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-envelope"></i>						</span>
+										<span class="elementor-icon-list-text">admissions@edifyschoolbengaluru.com</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="mailto:info@edifyschoolbengaluru.com">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-envelope"></i>						</span>
+										<span class="elementor-icon-list-text">info@edifyschoolbengaluru.com</span>
+											</a>
+									</li>
+						</ul>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-983d865 e-con-full e-flex e-con e-child" data-id="983d865" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-51f242b elementor-widget elementor-widget-heading" data-id="51f242b" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Connect &amp; Follow</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-34172ed elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="34172ed" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-82a81b0 elementor-shape-circle e-grid-align-mobile-center elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="82a81b0" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-social-icons-wrapper elementor-grid">
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-animation-grow elementor-repeater-item-80dc8d0" href="https://www.facebook.com/people/Edifyschool-Kanakapura-Road/100003973727403/?mibextid=ZbWKwL" target="_blank">
+						<span class="elementor-screen-only">Facebook</span>
+						<i class="fab fa-facebook"></i>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon- elementor-animation-grow elementor-repeater-item-3402e46" href="https://twitter.com/edifykanakapura" target="_blank">
+						<span class="elementor-screen-only"></span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" fill="none" viewBox="0 0 512 512" id="twitter"><g clip-path="url(#clip0_84_15698)"><rect width="512" height="512" fill="#fff" rx="60"></rect><path fill="#000" d="M355.904 100H408.832L293.2 232.16L429.232 412H322.72L239.296 302.928L143.84 412H90.8805L214.56 270.64L84.0645 100H193.28L268.688 199.696L355.904 100ZM337.328 380.32H366.656L177.344 130.016H145.872L337.328 380.32Z"></path></g><defs><clipPath id="clip0_84_15698"><rect width="512" height="512" fill="#fff"></rect></clipPath></defs></svg>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-animation-grow elementor-repeater-item-8a74c87" href="https://www.youtube.com/c/EdifySchoolKanakapuraMainRoad" target="_blank">
+						<span class="elementor-screen-only">Youtube</span>
+						<i class="fab fa-youtube"></i>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-grow elementor-repeater-item-1c32201" href="https://www.instagram.com/edifyschoolkanakapuramainroad/?igshid=a2F4aWwyMTdpaDRv" target="_blank">
+						<span class="elementor-screen-only">Instagram</span>
+						<i class="fab fa-instagram"></i>					</a>
+				</span>
+					</div>
+				</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-fb8a95b e-con-full e-flex e-con e-parent" data-id="fb8a95b" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+		<div class="elementor-element elementor-element-e8a8408 e-con-full e-flex e-con e-child" data-id="e8a8408" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-9ef1369 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="9ef1369" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-691784f e-con-full e-flex e-con e-child" data-id="691784f" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-f7dad03 elementor-widget elementor-widget-heading" data-id="f7dad03" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">&#169; Edify Schools 2023. All Right Reserved</h6>		</div>
+				</div>
+				</div>
+				</div>
+				</div>
+		
+		<div data-elementor-type="popup" data-elementor-id="5333" class="elementor elementor-5333 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;fadeInLeft&quot;,&quot;exit_animation&quot;:&quot;fadeInLeft&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.5,&quot;sizes&quot;:[]},&quot;prevent_close_on_background_click&quot;:&quot;yes&quot;,&quot;prevent_close_on_esc_key&quot;:&quot;yes&quot;,&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:{&quot;scrolling_offset&quot;:10,&quot;scrolling&quot;:&quot;yes&quot;,&quot;scrolling_direction&quot;:&quot;down&quot;},&quot;timing&quot;:[]}" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-6bdb43c e-flex e-con-boxed e-con e-parent" data-id="6bdb43c" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-4a12f0d elementor-widget elementor-widget-elementskit-back-to-top" data-id="4a12f0d" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="elementskit-back-to-top.default">
+				<div class="elementor-widget-container">
+			<div class="ekit-wid-con" >			<div class="ekit-back-to-top-container ekit-btt icon_only" data-settings="{&quot;offset_top&quot;:0,&quot;show_after&quot;:null,&quot;show_scroll&quot;:&quot;&quot;,&quot;style&quot;:&quot;icon_only&quot;,&quot;foreground&quot;:null,&quot;background&quot;:null}"> 
+				<span class="ekit-btt__button ">
+					<i aria-hidden="true" class="fas fa-arrow-up"></i>				</span>
+			</div>
+		</div>		</div>
+				</div>
+					</div>
+				</div>
+				</div>
+				<div data-elementor-type="popup" data-elementor-id="461" class="elementor elementor-461 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;fadeInDown&quot;,&quot;exit_animation&quot;:&quot;fadeIn&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;1&quot;,&quot;sizes&quot;:[]},&quot;avoid_multiple_popups&quot;:&quot;yes&quot;,&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:[]}" data-elementor-post-type="elementor_library">
+			<div class="elementor-element elementor-element-a08dbd3 e-flex e-con-boxed e-con e-parent" data-id="a08dbd3" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-3f418bb6 e-con-full e-flex e-con e-parent" data-id="3f418bb6" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-73ea6100 elementor-widget elementor-widget-spacer" data-id="73ea6100" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-44c5d22c e-con-full e-flex e-con e-parent" data-id="44c5d22c" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-2a9c7de0 elementor-widget elementor-widget-heading" data-id="2a9c7de0" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Thank you for submitting the form</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-58bf2edf elementor-widget elementor-widget-text-editor" data-id="58bf2edf" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p>Our Executive will get back to you soon. </p>						</div>
+				</div>
+				<div class="elementor-element elementor-element-7ab258f elementor-align-center elementor-widget elementor-widget-button" data-id="7ab258f" data-element_type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-md" href="https://edifyschoolbengaluru.com/">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon">
+				<i aria-hidden="true" class="fas fa-home"></i>			</span>
+									<span class="elementor-button-text">Go to our home page</span>
+					</span>
+					</a>
+				</div>
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-15f3bec e-con-full e-flex e-con e-parent" data-id="15f3bec" data-element_type="container" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+				<div class="elementor-element elementor-element-7f52e097 elementor-view-stacked elementor-shape-square elementor-widget__width-auto elementor-absolute elementor-widget-mobile__width-inherit elementor-widget elementor-widget-icon" data-id="7f52e097" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-wrapper">
+			<a class="elementor-icon" href="#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9">
+			<i aria-hidden="true" class="far fa-window-close"></i>			</a>
+		</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+					<script type="rocketlazyloadscript" data-rocket-type='text/javascript'>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<link rel='stylesheet' id='e-animation-slideInUp-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/lib/animations/styles/slideInUp.min.css?ver=3.25.4' media='all' />
+<link rel='stylesheet' id='widget-icon-list-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=3.25.4' media='all' />
+<link rel='stylesheet' id='widget-spacer-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=3.25.4' media='all' />
+<link rel='stylesheet' id='elementor-post-4975-css' href='https://edifyschoolbengaluru.com/wp-content/uploads/elementor/css/post-4975.css?ver=1730883190' media='all' />
+<link rel='stylesheet' id='widget-divider-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.25.4' media='all' />
+<link rel='stylesheet' id='e-animation-grow-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-grow.min.css?ver=3.25.4' media='all' />
+<link rel='stylesheet' id='widget-social-icons-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.25.4' media='all' />
+<link rel='stylesheet' id='e-apple-webkit-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css?ver=3.25.4' media='all' />
+<link rel='stylesheet' id='e-animation-fadeInLeft-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInLeft.min.css?ver=3.25.4' media='all' />
+<link rel='stylesheet' id='e-animation-fadeInDown-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInDown.min.css?ver=3.25.4' media='all' />
+<link rel='stylesheet' id='e-animation-fadeIn-css' href='https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css?ver=3.25.4' media='all' />
+<link data-minify="1" rel='stylesheet' id='elementskit-reset-button-for-pro-form-css-css' href='https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit/modules/pro-form-reset-button/assets/css/elementskit-reset-button.css?ver=1731388389' media='all' />
+<link data-minify="1" rel='stylesheet' id='ekit-particles-css' href='https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit/modules/particles/assets/css/particles.css?ver=1731388389' media='all' />
+<script type="rocketlazyloadscript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/edifyschoolbengaluru.com","onHoverDelay":"100","rateThrottle":"3"};
+</script>
+<script type="rocketlazyloadscript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script id="rocket_lazyload_css-js-extra">
+var rocket_lazyload_css_data = {"threshold":"300"};
+</script>
+<script id="rocket_lazyload_css-js-after">
+!function o(n,c,a){function s(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(u)return u(t,!0);throw(r=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",r}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return s(n[t][1][e]||e)},r,r.exports,o,n,c,a)}return c[t].exports}for(var u="function"==typeof require&&require,e=0;e<a.length;e++)s(a[e]);return s}({1:[function(e,t,r){"use strict";!function(){const r="undefined"==typeof rocket_pairs?[]:rocket_pairs,e="undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs;e.map(t=>{var e=t.selector;const r=document.querySelectorAll(e);r.forEach(e=>{e.setAttribute("data-rocket-lazy-bg-".concat(t.hash),"excluded")})});const o=document.querySelector("#wpr-lazyload-bg-container");var t=rocket_lazyload_css_data.threshold||300;const n=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting){const e=r.filter(e=>t.target.matches(e.selector));e.map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,o.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{n.unobserve(e),e.setAttribute("data-rocket-lazy-bg-".concat(t.hash),"loaded")}))})}})},{rootMargin:t+"px"});function c(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&r.forEach(t=>{try{const e=document.querySelectorAll(t.selector);e.forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-".concat(t.hash))&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-".concat(t.hash))&&(n.observe(e),(t.elements||(t.elements=[])).push(e))})}catch(e){console.error(e)}})}c();const a=function(){const o=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType){const r=new o(t);return r.observe(e,{attributes:!0,childList:!0,subtree:!0}),r}}}();t=document.querySelector("body"),a(t,c)}()},{}]},{},[1]);
+//# sourceMappingURL=lazyload-css.min.js.map
+</script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=3.0.1" id="hello-theme-frontend-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/plugins/elementor-pro/assets//lib/instant-page/instant-page.min.js?ver=3.21.2" id="instant-page-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1" id="smartmenus-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script.js?ver=1731388389" id="elementskit-framework-js-frontend-js" defer></script>
+<script type="rocketlazyloadscript" id="elementskit-framework-js-frontend-js-after">
+		var elementskit = {
+			resturl: 'https://edifyschoolbengaluru.com/wp-json/elementskit/v1/',
+		}
+
+		
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js?ver=1731388389" id="ekit-widget-scripts-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit/modules/parallax/assets/js/anime.js?ver=1731388389" id="animejs-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" defer data-rocket-src="https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit/modules/parallax/assets/js/parallax-frontend-scripts.js?ver=1731388389" id="elementskit-parallax-frontend-defer-js"></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.21.2" id="elementor-pro-webpack-runtime-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.25.4" id="elementor-webpack-runtime-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.25.4" id="elementor-frontend-modules-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-includes/js/dist/hooks.min.js?ver=2810c76e705dd1a53b18" id="wp-hooks-js"></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="rocketlazyloadscript" id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type="rocketlazyloadscript" id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/edifyschoolbengaluru.com\/wp-admin\/admin-ajax.php","nonce":"6f1ce1deee","urls":{"assets":"https:\/\/edifyschoolbengaluru.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/edifyschoolbengaluru.com\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/edifyschoolbengaluru.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.21.2" id="elementor-pro-frontend-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js" defer></script>
+<script type="rocketlazyloadscript" id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.25.4","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"container":true,"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_optimized_control_loading":true,"e_onboarding":true,"e_css_smooth_scroll":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"home_screen":true,"landing-pages":true,"nested-elements":true,"editor_v2":true,"link-in-bio":true,"floating-buttons":true,"form-submissions":true},"urls":{"assets":"https:\/\/edifyschoolbengaluru.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/edifyschoolbengaluru.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/edifyschoolbengaluru.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"cee537a6b9"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"title","hello_header_menu_layout":"horizontal","hello_footer_logo_type":"logo"},"post":{"id":58,"title":"About%20the%20School%20-%20Edify%20School%20Kanakapura","excerpt":"","featuredImage":false}};
+</script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.4" id="elementor-frontend-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.21.2" id="pro-elements-handlers-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.min.js?ver=3.3.1" id="animate-circle-js" defer></script>
+<script id="elementskit-elementor-js-extra">
+var ekit_config = {"ajaxurl":"https:\/\/edifyschoolbengaluru.com\/wp-admin\/admin-ajax.php","nonce":"f1eb1b63dc"};
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js?ver=1731388389" id="elementskit-elementor-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit/widgets/init/assets/js/elementor.js?ver=1731388389" id="elementskit-elementor-pro-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" defer data-rocket-src="https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit/modules/sticky-content/assets/js/elementskit-sticky-content.js?ver=1731388390" id="elementskit-sticky-content-script-init-defer-js"></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit/modules/pro-form-reset-button/assets/js/elementskit-reset-button.js?ver=1731388390" id="elementskit-reset-button-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/plugins/elementskit/modules/particles/assets/js/particles.min.js?ver=3.6.0" id="particles-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit/modules/particles/assets/js/ekit-particles.js?ver=1731388390" id="ekit-particles-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" defer data-rocket-src="https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit/modules/parallax/assets/js/parallax-admin-scripts.js?ver=1731388390" id="elementskit-parallax-admin-defer-js"></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit/modules/wrapper-link/assets/js/wrapper.js?ver=1731388390" id="elementskit-wrapper-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/plugins/elementskit/modules/mouse-cursor/assets/js/cotton.min.js?ver=3.6.0" id="cotton-js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://edifyschoolbengaluru.com/wp-content/cache/min/1/wp-content/plugins/elementskit/modules/mouse-cursor/assets/js/mouse-cursor-scripts.js?ver=1731388390" id="mouse-cursor-js" defer></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://edifyschoolbengaluru.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt,l){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';if(l){t=t.replace('data-lazy-','');t=t.replace('loading="lazy"','');t=t.replace(/<noscript>.*?<\/noscript>/g,'');}t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?"":"&"+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var exclusions=[];var e,t,p,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)(e=document.createElement("div")),(u='https://i.ytimg.com/vi/ID/hqdefault.jpg'),(u=u.replace('ID',a[t].dataset.id)),(l=exclusions.some(exclusion=>u.includes(exclusion))),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query",a[t].dataset.query),e.setAttribute("data-src",a[t].dataset.src),(e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l)),a[t].appendChild(e),(p=e.querySelector(".play")),(p.onclick=lazyLoadYoutubeIframe)});</script>
+<script>class RocketElementorAnimation{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode-wpr",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}_detectAnimations(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this._listAnimationSettingsKeys(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this._animateElement(t)}catch(t){}})}_animateElement(t){const e=JSON.parse(t.dataset.settings),i=e._animation_delay||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let s=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this._removeAnimationSettings(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(s)})}_listAnimationSettingsKeys(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}_removeAnimationSettings(t,e){this._listAnimationSettingsKeys().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorAnimation;requestAnimationFrame(t._detectAnimations.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorAnimation.run);</script></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1731388529 -->
